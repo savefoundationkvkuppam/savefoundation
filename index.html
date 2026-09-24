@@ -41,16 +41,33 @@
     }
     .topbar a:hover{color:#ffd45a}
     header{
-      background:#fff;position:sticky;top:0;z-index:50;
-      box-shadow:0 4px 18px rgba(0,0,0,.08)
-    }
-    .nav-wrap{
-      max-width:1250px;margin:auto;display:flex;align-items:center;
-      justify-content:space-between;padding:13px 25px
-    }
-    .brand{display:flex;align-items:center;gap:13px;min-width:250px}
+    width:100%;
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:50;
+    box-shadow:0 4px 18px rgba(0,0,0,.08);
+    box-sizing:border-box;
+}
+  .nav-wrap{
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+    padding:9px 30px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    box-sizing:border-box;
+}
+    .brand{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    flex-shrink:0;
+}
     .brand-mark{
-      width:65px;height:65px;border-radius:50%;
+      width:58px;height:58px;border-radius:50%;
       background:#fff;
       display:grid;place-items:center;overflow:hidden;
       border:3px solid var(--gold);box-shadow:0 5px 14px rgba(0,0,0,.16);
@@ -61,10 +78,29 @@
     }
     .brand-text h1{font-family:Montserrat,sans-serif;font-size:23px;line-height:1.1;font-weight:800}
     .brand-text p{font-size:11px;color:var(--orange);font-weight:700;letter-spacing:.7px;margin-top:4px}
-    nav{display:flex;align-items:center;gap:4px}
-    nav a{padding:13px 15px;font-weight:600;font-size:14px;border-radius:5px}
-    nav a:hover,nav a.active{background:var(--orange);color:#fff}
-    .menu-btn{display:none;background:var(--orange);border:0;color:#fff;padding:10px 13px;border-radius:6px;font-size:20px}
+    nav{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:4px;
+    margin-left:auto;
+}
+   nav a{
+    padding:13px 15px;
+    font-weight:600;
+    font-size:14px;
+    border-radius:5px;
+    text-decoration:none;
+    color:#23483a;
+   }
+   nav a:hover {
+    background:transparent;
+    color:var(--green);
+}
+    nav a.active {
+    background:transparent;
+    color:var(--green);
+}
 
     .hero{
       min-height:650px;position:relative;overflow:hidden;
@@ -924,6 +960,265 @@ nav a:hover{
 .footer-links a:hover {
     color: #e3a93b !important;
 }
+.hero-overview {
+    margin-top: 24px;
+    max-width: 720px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-foundation-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    padding: 12px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.hero-foundation-info span {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.hero-foundation-info strong {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+
+    .hero-overview {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .hero-foundation-info {
+        flex-wrap: wrap;
+        gap: 6px 10px;
+    }
+
+}
+/* =========================
+   HEADER DESKTOP FIX
+========================= */
+
+header {
+    width: 100%;
+    min-height: 90px;
+    padding: 12px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.brand-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    display: block;
+}
+
+.brand-text {
+    display: block;
+}
+
+.brand-text h1 {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.brand-text p {
+    margin: 4px 0 0;
+    white-space: nowrap;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-left: auto;
+}
+
+#nav a {
+    white-space: nowrap;
+}
+
+.menu-btn {
+    display: none !important;
+}
+/* =========================
+   OUR IMPACT
+========================= */
+
+.impact-section {
+    width: 100%;
+    padding: 110px 7%;
+    box-sizing: border-box;
+    background: #075b3c;
+    color: #ffffff;
+}
+
+.impact-header {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.impact-header > span {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #e3a72b;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.impact-header h2 {
+    margin: 0 0 18px;
+    color: #ffffff;
+    font-size: 46px;
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+.impact-header h2 em {
+    color: #e3a72b;
+    font-style: italic;
+}
+
+.impact-header p {
+    max-width: 850px;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.88);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* IMPACT GRID */
+
+.impact-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.impact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+
+    padding: 28px 30px;
+
+    background: rgba(255,255,255,0.07);
+
+    border: 1px solid rgba(255,255,255,0.20);
+
+    border-radius: 20px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.impact-item:hover {
+    transform: translateY(-6px);
+
+    background: rgba(255,255,255,0.11);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.12);
+}
+
+.impact-number {
+    min-width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #d49318;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.impact-item h3 {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.impact-item p {
+    margin: 0;
+
+    color: rgba(255,255,255,0.78);
+
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .impact-section {
+        padding: 75px 20px;
+    }
+
+    .impact-header h2 {
+        font-size: 34px;
+    }
+
+    .impact-header p {
+        font-size: 16px;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .impact-item {
+        padding: 24px 20px;
+    }
+
+    .impact-item h3 {
+        font-size: 19px;
+    }
+
+}
   </style>
 </head>
 <body>
@@ -939,11 +1234,16 @@ nav a:hover{
       </a>
       <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
       <nav id="nav">
-        <a class="active" href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#programs">Programs</a>
-        <a href="#impact">Our Impact</a>
-        <a href="#contact">Contact Us</a>
+       <nav id="nav">
+    <a class="active" href="#home">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="programs.html">Programs</a>
+    <a href="#impact">Our Impact</a>
+    <a href="support.html">Support SAVE</a>
+    <a href="#contact">Contact Us</a>
+    
+</nav>
+
       </nav>
     </div>
   </header>
@@ -954,13 +1254,20 @@ nav a:hover{
         <div class="hero-copy">
           <span class="eyebrow">SUSTAINABLE • INCLUSIVE • COMMUNITY-LED</span>
           <h2>Growing <span>stronger villages</span>, together.</h2>
-          <p>
-            SAVE Foundation — <strong>Sustainable Agriculture and Village Enrichment</strong> —
-            works with communities to create sustainable livelihoods, strengthen villages,
-            and build a better future through practical, people-centered development.
-          </p>
+          <p class="hero-overview">
+        SAVE Foundation — <strong>Sustainable Agriculture and Village
+    Enrichment</strong> — is a community-focused foundation working
+    to strengthen rural livelihoods through sustainable agriculture,
+    financial support, community institutions and inclusive village
+    development. Established on 16 December 2025, SAVE Foundation
+    places farmers, families and village communities at the centre
+    of development, creating practical pathways towards self-reliance
+    and a sustainable future.
+        </p>
+
+         
           <div class="btns">
-            <a class="btn btn-primary" href="#about">Discover SAVE</a>
+            <a class="btn btn-primary" href="about.html">Discover SAVE</a>
             <a class="btn btn-outline" href="#contact">Contact Us</a>
           </div>
         </div>
@@ -968,6 +1275,11 @@ nav a:hover{
 
     <div class="hero-art">
 
+         <img
+            class="hero-slide"
+            src="assets/groundnut.png"
+            alt="SAVE Foundation sustainable agriculture"
+        >
         <img
             class="hero-slide active"
             src="assets/community.jpg"
@@ -976,14 +1288,13 @@ nav a:hover{
 
         <img
             class="hero-slide"
-            src="assets/community1.jpg"
-            alt="SAVE Foundation livelihood support"
+            src="assets/poultry .png"
+            alt="SAVE Foundation village development"
         >
-
         <img
             class="hero-slide"
-            src="assets/community2.jpg"
-            alt="SAVE Foundation sustainable agriculture"
+            src="assets/community1.jpg"
+            alt="SAVE Foundation livelihood support"
         >
 
         <img
@@ -991,6 +1302,13 @@ nav a:hover{
             src="assets/community3.jpg"
             alt="SAVE Foundation village development"
         >
+        <img
+            class="hero-slide"
+            src="assets/Goat farming support.jpg"
+            alt="SAVE Foundation village development"
+        >
+
+        
 
     </div>
 
@@ -1016,15 +1334,17 @@ nav a:hover{
           <p>We believe lasting development begins when communities have the knowledge, resources and confidence to shape their own future.</p>
         </div>
         <div class="about-copy">
-          <h3>People. Livelihoods. Communities.</h3>
+          <h2>
+    Strengthening livelihoods.<br>
+    Empowering communities.
+</h2>
           <p>
-            SAVE Foundation is committed to supporting rural communities through sustainable
-            agriculture, livelihood development, skill building and community-led initiatives.
-          </p>
-          <p>
-            We aim to create practical pathways for families and villages to become more
-            resilient while protecting natural resources for future generations.
-          </p>
+    Sustainable Agriculture and Village Enrichment Foundation (SAVE Foundation) is a community-focused organization committed to creating sustainable and resilient rural communities. We work with farmers, women, youth, and village communities to strengthen livelihoods, promote sustainable agriculture, conserve natural resources, and improve the overall quality of rural life.
+Our approach is rooted in community participation, local knowledge, appropriate technology, and sustainable solutions that create lasting social, 
+economic, and environmental impact
+</p>
+
+
           <ul class="check-list">
             <li>Promote sustainable farming practices</li>
             <li>Strengthen rural livelihoods and skills</li>
@@ -1039,47 +1359,53 @@ nav a:hover{
 
     <div class="section-head">
         <span class="tag">HOW WE SUPPORT</span>
-        <h2>Livelihood Support Programs</h2>
+        <h2>Livelihood Programs</h2>
         <p>Helping rural families build stable incomes, stronger livelihoods and a better future.</p>
     </div>
 
     <div class="cards program-cards">
 
-        <!-- PROGRAM 1 -->
+
+
+
+<!-- PROGRAM 2 -->
 <article class="card program-card">
     <div class="program-image">
-        <img src="assets/community2.jpg"
-             alt="Livestock support for rural families">
+        <img src="assets/groundnut.png"
+             alt="Agriculture support for farmers">
     </div>
 
     <div class="program-content">
-        <div class="icon">🐄</div>
-        <h3>Livestock Support</h3>
+        <div class="icon">🌾</div>
+        <h3>Sustainable Agriculture</h3>
         <p>
-            Helping rural families build a regular source of income
-            by supporting livestock-based livelihoods such as cows,
-            goats and other useful animals.
+            Supporting small farmers with better farming practices,
+            agricultural resources and opportunities to improve
+            household income.
         </p>
         <a href="#contact" class="program-link">Learn More →</a>
     </div>
 </article>
 
 
-<!-- PROGRAM 2 -->
+<!-- LIVESTOCK SUPPORT -->
 <article class="card program-card">
     <div class="program-image">
-        <img src="assets/agriculture.jpg"
-             alt="Agriculture support for farmers">
+        <img src="assets/cow.jpg"
+             alt="Cow assistance for rural families">
     </div>
 
     <div class="program-content">
-        <div class="icon">🌾</div>
-        <h3>Agriculture Support</h3>
+        <div class="icon">🐄</div>
+
+        <h3>Livestock Development</h3>
+
         <p>
-            Supporting small farmers with better farming practices,
-            agricultural resources and opportunities to improve
-            household income.
+            Supporting low-income rural families with livestock assistance
+            such as cows to help create sustainable income and improve
+            household livelihoods.
         </p>
+
         <a href="#contact" class="program-link">Learn More →</a>
     </div>
 </article>
@@ -1105,25 +1431,24 @@ nav a:hover{
     </div>
 </article>
 
-
-<!-- PROGRAM 4 -->
+        <!-- PROGRAM 1 -->
 <article class="card program-card">
     <div class="program-image">
-       <img src="assets/livelihood.jpg"
-             alt="Livelihood and skills development">
+        <img src="assets/market linkage.png"
+    alt="Groundnut farming and harvesting support">
     </div>
 
     <div class="program-content">
-        <div class="icon">💼</div>
-        <h3>Livelihood &amp; Skills</h3>
+        <div class="icon">🌾</div>
+       <h3> Market Linkage </h3>
         <p>
-            Helping individuals learn practical skills and start
-            small income-generating activities for a more secure
-            future.
-        </p>
+          Connecting farmers and community groups with market opportunities,
+           buyers and collective marketing channels to strengthen agricultural livelihoods.
+       </p>
         <a href="#contact" class="program-link">Learn More →</a>
     </div>
 </article>
+
 
 
 <!-- PROGRAM 5 -->
@@ -1166,85 +1491,6 @@ nav a:hover{
 </article>
 
 
-
-<!-- LIVESTOCK SUPPORT -->
-<article class="card program-card">
-    <div class="program-image">
-        <img src="assets/cow.jpg"
-             alt="Cow assistance for rural families">
-    </div>
-
-    <div class="program-content">
-        <div class="icon">🐄</div>
-
-        <h3>Livestock Support</h3>
-
-        <p>
-            Supporting low-income rural families with livestock assistance
-            such as cows to help create sustainable income and improve
-            household livelihoods.
-        </p>
-
-        <a href="#contact" class="program-link">Learn More →</a>
-    </div>
-</article>
-<!-- PROGRAM 7 - GOAT FARMING -->
-<article class="card program-card">
-
-    <div class="program-image">
-        <img
-            src="assets/Goat farming support.jpg"
-            alt="Goat farming support for rural families">
-    </div>
-
-    <div class="program-content">
-
-        <div class="icon">🐐</div>
-
-        <h3>Goat Farming Support</h3>
-
-        <p>
-            Helping rural families start and grow goat farming
-            through financial assistance, training and veterinary
-            support for sustainable income and a better future.
-        </p>
-
-        <a href="#contact" class="program-link">
-            Learn More →
-        </a>
-
-    </div>
-
-</article>
-
-<!-- PROGRAM 8 - LIVESTOCK & DAIRY -->
-<article class="card program-card">
-
-    <div class="program-image">
-        <img
-            src="assets/Livestock&Dairy Livelihood.png"
-            alt="Livestock and dairy livelihood support">
-    </div>
-
-    <div class="program-content">
-
-        <div class="icon">🐄</div>
-
-        <h3>Livestock &amp; Dairy Livelihood</h3>
-
-        <p>
-            Helping rural families build sustainable income through
-            livestock support, dairy activities, training and
-            ongoing animal care for better livelihoods.
-        </p>
-
-        <a href="#contact" class="program-link">
-            Learn More →
-        </a>
-
-    </div>
-
-</article>
 
 </div>
 </section>
@@ -1299,19 +1545,207 @@ nav a:hover{
 
 </section>
 
-    <section class="impact" id="impact">
-      <div class="section-head">
-        <span class="tag">Our Vision</span>
-        <h2>Creating meaningful impact</h2>
-        <p>We measure success by stronger people, healthier livelihoods and more resilient villages.</p>
-      </div>
-      <div class="impact-grid">
-        <div class="impact-box"><strong>01</strong><span>Community First</span></div>
-        <div class="impact-box"><strong>02</strong><span>Sustainable Action</span></div>
-        <div class="impact-box"><strong>03</strong><span>Inclusive Growth</span></div>
-        <div class="impact-box"><strong>04</strong><span>Long-Term Change</span></div>
-      </div>
-    </section>
+    <!-- OUR IMPACT -->
+
+<section class="impact-section" id="impact">
+
+    <div class="impact-header">
+
+        <span>OUR IMPACT</span>
+
+        <h2>
+            Creating Change at the
+            <em>Grassroots</em>
+        </h2>
+
+        <p>
+            We strive to create measurable and sustainable improvements
+            in rural communities by focusing on practical opportunities,
+            stronger institutions, resilient livelihoods and inclusive
+            village development.
+        </p>
+
+    </div>
+
+
+    <div class="impact-grid">
+
+        <div class="impact-item">
+
+            <div class="impact-number">
+                01
+            </div>
+
+            <div>
+                <h3>
+                    Increased Agricultural Productivity
+                </h3>
+
+                <p>
+                    Supporting improved agricultural practices and
+                    opportunities that can contribute to stronger
+                    farm livelihoods and incomes.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="impact-item">
+
+            <div class="impact-number">
+                02
+            </div>
+
+            <div>
+                <h3>
+                    Improved Soil & Water Management
+                </h3>
+
+                <p>
+                    Encouraging responsible soil and water management
+                    practices that contribute to sustainable rural
+                    development.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="impact-item">
+
+            <div class="impact-number">
+                03
+            </div>
+
+            <div>
+                <h3>
+                    Diversified & Resilient Livelihoods
+                </h3>
+
+                <p>
+                    Supporting families in exploring diversified
+                    livelihood opportunities that can strengthen
+                    household resilience.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="impact-item">
+
+            <div class="impact-number">
+                04
+            </div>
+
+            <div>
+                <h3>
+                    Stronger Farmer & Community Institutions
+                </h3>
+
+                <p>
+                    Strengthening farmer groups, Self-Help Groups and
+                    community institutions through participation,
+                    skills and collective action.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="impact-item">
+
+            <div class="impact-number">
+                05
+            </div>
+
+            <div>
+                <h3>
+                    Opportunities for Women & Youth
+                </h3>
+
+                <p>
+                    Promoting opportunities for women and youth through
+                    skills, participation, livelihood development and
+                    community-based initiatives.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="impact-item">
+
+            <div class="impact-number">
+                06
+            </div>
+
+            <div>
+                <h3>
+                    Access to Knowledge, Technology & Markets
+                </h3>
+
+                <p>
+                    Helping communities explore access to relevant
+                    knowledge, technologies, financial opportunities
+                    and market linkages.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="impact-item">
+
+            <div class="impact-number">
+                07
+            </div>
+
+            <div>
+                <h3>
+                    Enhanced Environmental Sustainability
+                </h3>
+
+                <p>
+                    Encouraging environmentally responsible practices
+                    and community participation in natural resource
+                    conservation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="impact-item">
+
+            <div class="impact-number">
+                08
+            </div>
+
+            <div>
+                <h3>
+                    Better Quality of Life in Rural Villages
+                </h3>
+
+                <p>
+                    Contributing to stronger livelihoods, community
+                    participation and improved opportunities for
+                    families and villages.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 <section class="mission-section" id="mission">
 
   <div class="section-head">
@@ -1332,9 +1766,8 @@ nav a:hover{
       <div>
         <h3>Our Mission</h3>
         <p>
-          To empower rural communities through sustainable agriculture,
-          education, and livelihood programs that promote dignity,
-          equality, and self-reliance.
+          "To empower rural communities through sustainable agriculture, livelihood development, natural resource management,
+           capacity building, and community-led initiatives that promote lasting social, economic, and environmental well-being."
         </p>
       </div>
     </div>
@@ -1346,9 +1779,8 @@ nav a:hover{
       <div>
         <h3>Our Vision</h3>
         <p>
-          To build vibrant, self-reliant villages where every individual
-          has the opportunity to live with dignity and contribute to a
-          sustainable future.
+          "To build prosperous, inclusive, and environmentally sustainable villages where farming communities thrive with dignity, 
+          resilience, and equal opportunities."
         </p>
       </div>
     </div>
@@ -1360,9 +1792,9 @@ nav a:hover{
       <div>
         <h3>Our Goal</h3>
         <p>
-          To create lasting positive change in rural areas by reaching
-          more communities, building partnerships, and implementing
-          impactful, sustainable solutions.
+          “To create resilient and self-reliant villages by strengthening sustainable farming,
+           protecting natural resources, 
+           enhancing livelihoods, empowering communities and promoting inclusive development.”
         </p>
       </div>
     </div>

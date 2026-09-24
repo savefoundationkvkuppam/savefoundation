@@ -1,0 +1,2795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Learn about SAVE Foundation - Sustainable Agriculture and Village Enrichment, our purpose, approach and community-focused work."
+    >
+
+    <title>About SAVE Foundation | Sustainable Agriculture & Village Enrichment</title>
+
+    <link rel="icon" type="image/jpeg" href="assets/save-logo.jpeg">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root {
+            --green: #0b6b3a;
+            --green-dark: #07532d;
+            --green-light: #edf7f0;
+            --orange: #e3a93b;
+            --orange-dark: #c98708;
+            --cream: #fffaf1;
+            --text: #123d2a;
+            --text-light: #587267;
+            --white: #ffffff;
+            --shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .topbar {
+            background: var(--green-dark);
+            color: white;
+            padding: 9px 6%;
+            display: flex;
+            justify-content: flex-end;
+            gap: 25px;
+            font-size: 13px;
+        }
+
+        .topbar a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .topbar a:hover {
+            color: var(--orange);
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .navbar {
+            max-width: 1250px;
+            margin: auto;
+            min-height: 78px;
+            padding: 10px 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+        }
+
+        .brand img {
+            width: 58px;
+            height: 58px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .brand-text strong {
+            display: block;
+            font-family: "Montserrat", sans-serif;
+            color: #4f2696;
+            font-size: 19px;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+        }
+
+        .brand-text span {
+            display: block;
+            max-width: 270px;
+            color: var(--orange-dark);
+            font-size: 9px;
+            line-height: 1.25;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--text);
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none !important;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--orange-dark);
+        }
+
+        .menu-btn {
+            display: none;
+            border: none;
+            background: var(--orange);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           PAGE HERO
+        ========================= */
+
+        .page-hero {
+            min-height: 500px;
+            padding: 80px 7%;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(7, 83, 45, 0.97),
+                    rgba(11, 107, 58, 0.88)
+                ),
+                url("assets/village-background.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            color: white;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 30px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.25);
+
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .page-hero h1 {
+            margin-top: 25px;
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(40px, 6vw, 70px);
+            line-height: 1.05;
+            font-weight: 800;
+        }
+
+        .page-hero h1 span {
+            color: #ffd75a;
+        }
+
+        .page-hero p {
+            max-width: 760px;
+            margin-top: 25px;
+            font-size: 18px;
+            color: rgba(255,255,255,0.92);
+        }
+
+        /* =========================
+           COMMON SECTION
+        ========================= */
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-heading {
+            max-width: 800px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .section-heading .small-title {
+            color: var(--orange-dark);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            margin-top: 8px;
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(30px, 4vw, 45px);
+            line-height: 1.15;
+            color: var(--green-dark);
+        }
+
+        .section-heading p {
+            margin-top: 15px;
+            color: var(--text-light);
+        }
+
+        /* =========================
+           WHO WE ARE
+        ========================= */
+
+        .about-grid {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: white;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        .about-text h2 {
+            font-family: "Montserrat", sans-serif;
+            color: var(--green-dark);
+            font-size: 38px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .about-text h2 span {
+            color: var(--orange);
+        }
+
+        .about-text p {
+            margin-bottom: 17px;
+            color: var(--text-light);
+        }
+
+        .highlight-box {
+            margin-top: 25px;
+            padding: 22px;
+            border-left: 5px solid var(--orange);
+            background: var(--green-light);
+            border-radius: 12px;
+            color: var(--green-dark);
+            font-weight: 600;
+        }
+
+        /* =========================
+           PURPOSE
+        ========================= */
+
+        .purpose-section {
+            background: white;
+        }
+
+        .purpose-grid {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .purpose-card {
+            padding: 35px 28px;
+            border-radius: 20px;
+            background: var(--green-light);
+            border: 1px solid rgba(11,107,58,0.08);
+            transition: 0.3s;
+        }
+
+        .purpose-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow);
+        }
+
+        .purpose-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: var(--orange);
+            color: white;
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        .purpose-card h3 {
+            color: var(--green-dark);
+            font-family: "Montserrat", sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .purpose-card p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+       /* =========================
+   OUR APPROACH
+========================= */
+
+.approach-section {
+    width: 100%;
+    padding: 110px 7%;
+    box-sizing: border-box;
+    background: #f7f3e9;
+}
+
+.approach-header {
+    max-width: 900px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.approach-header > span {
+    display: inline-block;
+    margin-bottom: 15px;
+
+    color: #d49318;
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.approach-header h2 {
+    margin: 0 0 20px;
+
+    color: #075b3c;
+
+    font-size: 46px;
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+.approach-header h2 em {
+    color: #d49318;
+    font-style: italic;
+}
+
+.approach-header p {
+    max-width: 760px;
+    margin: 0 auto;
+
+    color: #526b63;
+
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+
+/* APPROACH LIST */
+
+.approach-list {
+    max-width: 1050px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* APPROACH ITEM */
+
+.approach-item {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    gap: 25px;
+
+    align-items: start;
+
+    padding: 30px 0;
+
+    border-bottom: 1px solid rgba(11,107,58,0.15);
+}
+
+.approach-item:last-child {
+    border-bottom: none;
+}
+
+
+/* NUMBER */
+
+.approach-number {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #075b3c;
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 800;
+
+    box-shadow: 0 8px 20px rgba(7,91,60,0.15);
+}
+
+
+/* CONTENT */
+
+.approach-content h3 {
+    margin: 0 0 10px;
+
+    color: #075b3c;
+
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.approach-content p {
+    max-width: 850px;
+
+    margin: 0;
+
+    color: #526b63;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* HOVER */
+
+.approach-item {
+    transition: transform 0.25s ease;
+}
+
+.approach-item:hover {
+    transform: translateX(5px);
+}
+
+.approach-item:hover .approach-number {
+    background: #d49318;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .approach-section {
+        padding: 75px 20px;
+    }
+
+    .approach-header {
+        margin-bottom: 40px;
+    }
+
+    .approach-header h2 {
+        font-size: 34px;
+    }
+
+    .approach-header p {
+        font-size: 16px;
+    }
+
+    .approach-item {
+        grid-template-columns: 58px 1fr;
+        gap: 18px;
+        padding: 25px 0;
+    }
+
+    .approach-number {
+        width: 50px;
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .approach-content h3 {
+        font-size: 20px;
+    }
+
+    .approach-content p {
+        font-size: 15px;
+    }
+
+}
+
+        /* =========================
+           FOCUS AREAS
+        ========================= */
+
+        .focus-section {
+            background: white;
+        }
+
+        .focus-grid {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+        }
+
+        .focus-card {
+            padding: 28px 18px;
+            min-height: 180px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            background: var(--cream);
+            border-radius: 18px;
+            border: 1px solid rgba(11,107,58,0.08);
+        }
+
+        .focus-card .icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .focus-card h3 {
+            color: var(--green-dark);
+            font-size: 16px;
+        }
+
+        /* =========================
+           VISION
+        ========================= */
+
+        .vision-section {
+            background:
+                linear-gradient(
+                    rgba(7,83,45,0.94),
+                    rgba(7,83,45,0.94)
+                ),
+                url("assets/village.jpg");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .vision-grid {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .vision-card {
+            padding: 38px;
+            border-radius: 22px;
+            background: rgba(255,255,255,0.10);
+            border: 1px solid rgba(255,255,255,0.16);
+        }
+
+        .vision-card h2 {
+            font-family: "Montserrat", sans-serif;
+            margin-bottom: 15px;
+            color: #ffd75a;
+        }
+
+        .vision-card p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            padding: 70px 7%;
+            text-align: center;
+            background: var(--orange);
+        }
+
+        .cta h2 {
+            font-family: "Montserrat", sans-serif;
+            color: white;
+            font-size: clamp(30px, 4vw, 45px);
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 15px auto 25px;
+            color: white;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 13px 25px;
+            border-radius: 9px;
+
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--green-dark);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .btn-green {
+            background: var(--green-dark);
+            color: white;
+            margin-left: 10px;
+        }
+
+        .btn-green:hover {
+            background: #043b20;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #073d29;
+            color: white;
+            padding: 45px 7% 25px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-brand img {
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .footer-brand strong {
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .footer-links a {
+            color: white !important;
+            text-decoration: none !important;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--orange) !important;
+        }
+
+        .footer-line {
+            height: 1px;
+            background: rgba(255,255,255,0.15);
+            margin: 30px 0 20px;
+        }
+
+        .copyright {
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 13px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            nav {
+                position: absolute;
+                top: 78px;
+                left: 0;
+                right: 0;
+
+                background: white;
+
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+
+                padding: 20px 25px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            }
+
+            nav.open {
+                display: flex;
+            }
+
+            nav a {
+                padding: 12px 5px;
+                border-bottom: 1px solid #eeeeee;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .about-grid,
+            .vision-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .purpose-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .focus-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .topbar {
+                justify-content: center;
+                padding: 8px 15px;
+            }
+
+            .navbar {
+                padding: 8px 15px;
+            }
+
+            .brand img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .brand-text strong {
+                font-size: 16px;
+            }
+
+            .brand-text span {
+                font-size: 7px;
+                max-width: 190px;
+            }
+
+            .page-hero {
+                min-height: 500px;
+                padding: 65px 25px;
+            }
+
+            .page-hero p {
+                font-size: 15px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .about-image img {
+                height: 300px;
+            }
+
+            .about-text h2 {
+                font-size: 30px;
+            }
+
+            .focus-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .approach-step {
+                grid-template-columns: 55px 1fr;
+                gap: 15px;
+            }
+
+            .approach-number {
+                width: 48px;
+                height: 48px;
+                font-size: 16px;
+            }
+
+            .cta {
+                padding: 55px 20px;
+            }
+
+            .btn {
+                width: 100%;
+                margin: 6px 0;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+/* ==========================================
+   ABOUT PAGE — STORY THEME
+========================================== */
+
+.about-story-intro {
+    background: #f4efe5;
+    padding: 100px 8% 90px;
+    color: #123f2d;
+}
+
+.story-intro-label {
+    max-width: 1200px;
+    margin: 0 auto 45px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #b77912;
+    border-bottom: 1px solid #d8cdb9;
+    padding-bottom: 15px;
+}
+
+.story-intro-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.story-intro-heading h1 {
+    margin: 0;
+    font-size: 64px;
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: #0b5637;
+}
+
+.story-intro-heading h1 span {
+    display: block;
+    color: #c68a1b;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.story-intro-content {
+    padding-top: 8px;
+}
+
+.story-intro-content p {
+    margin: 0 0 22px;
+    color: #52685e;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.story-intro-content .story-lead {
+    color: #173f30;
+    font-size: 20px;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.story-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+    color: #0b5637;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid #c68a1b;
+    padding-bottom: 6px;
+}
+
+.story-link span {
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+.story-link:hover span {
+    transform: translateX(6px);
+}
+
+.story-intro-image {
+    max-width: 1200px;
+    height: 400px;
+    margin: 45px auto 0;
+    overflow: hidden;
+    border-radius: 4px;
+    position: relative;
+}
+
+.story-intro-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255,255,255,0.5);
+    pointer-events: none;
+}
+
+.story-intro-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.story-intro-image:hover img {
+    transform: scale(1.03);
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .about-story-intro {
+        padding: 65px 22px;
+    }
+
+    .story-intro-label {
+        margin-bottom: 30px;
+    }
+
+    .story-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .story-intro-heading h1 {
+        font-size: 43px;
+        letter-spacing: -1px;
+    }
+
+    .story-intro-content .story-lead {
+        font-size: 18px;
+    }
+
+    .story-intro-content p {
+        font-size: 16px;
+    }
+
+    .story-intro-image {
+        height: 280px;
+        margin-top: 45px;
+    }
+}
+   
+/* ==========================================
+   OUR STORY SECTION
+========================================== */
+
+.our-story-section {
+    background: #ffffff;
+    padding: 100px 8%;
+    color: #123f2d;
+}
+
+.our-story-header {
+    max-width: 850px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.our-story-header > span {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #b77912;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.our-story-header h2 {
+    margin: 0 0 25px;
+    color: #0b5637;
+    font-size: 52px;
+    line-height: 1.15;
+}
+
+.our-story-header h2 em {
+    display: block;
+    color: #c68a1b;
+    font-weight: 500;
+}
+
+.our-story-header p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #5a7067;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* Timeline */
+
+.story-timeline {
+    max-width: 1050px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.story-timeline::before {
+    content: "";
+    position: absolute;
+    left: 39px;
+    top: 20px;
+    bottom: 20px;
+    width: 1px;
+    background: #d8cdb9;
+}
+
+.story-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 35px;
+    padding: 0 0 55px;
+}
+
+.story-item:last-child {
+    padding-bottom: 0;
+}
+
+.story-year {
+    width: 78px;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #0b5637;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+}
+
+.story-content {
+    padding: 5px 0 0;
+}
+
+.story-content h3 {
+    margin: 0 0 12px;
+    color: #0b5637;
+    font-size: 25px;
+}
+
+.story-content p {
+    max-width: 700px;
+    margin: 0;
+    color: #61746d;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .our-story-section {
+        padding: 70px 22px;
+    }
+
+    .our-story-header {
+        margin-bottom: 50px;
+    }
+
+    .our-story-header h2 {
+        font-size: 38px;
+    }
+
+    .our-story-header p {
+        font-size: 16px;
+    }
+
+    .story-timeline::before {
+        left: 29px;
+    }
+
+    .story-item {
+        grid-template-columns: 60px 1fr;
+        gap: 20px;
+        padding-bottom: 40px;
+    }
+
+    .story-year {
+        width: 60px;
+        height: 60px;
+        font-size: 15px;
+    }
+
+    .story-content h3 {
+        font-size: 21px;
+    }
+
+    .story-content p {
+        font-size: 15px;
+    }
+}
+/* =========================================
+   WHAT WE DO - MODERN CARD SECTION
+   ========================================= */
+
+.what-we-do-section {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 110px 7% !important;
+    background: #f7f3e9 !important;
+}
+
+.what-we-do-header {
+    max-width: 950px !important;
+    margin: 0 auto 60px !important;
+    text-align: center !important;
+}
+
+.what-we-do-header > span {
+    display: inline-block !important;
+    margin-bottom: 15px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    color: #0b6b3a !important;
+    text-transform: uppercase !important;
+}
+
+.what-we-do-header h2 {
+    margin: 0 0 18px !important;
+    font-size: 46px !important;
+    line-height: 1.15 !important;
+    font-weight: 800 !important;
+    color: #064d35 !important;
+}
+
+.what-we-do-header h2 em {
+    color: #d49318 !important;
+    font-style: italic !important;
+}
+
+.what-we-do-header p {
+    margin: 0 auto !important;
+    max-width: 850px !important;
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    color: #46645a !important;
+}
+
+
+/* CARDS */
+
+.what-we-do-grid {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 28px !important;
+}
+
+.what-we-do-card {
+    position: relative !important;
+    padding: 38px 35px !important;
+    background: #ffffff !important;
+    border-radius: 24px !important;
+    border: 1px solid rgba(11, 107, 58, 0.08) !important;
+    box-shadow: 0 12px 35px rgba(20, 70, 45, 0.08) !important;
+    overflow: hidden !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.what-we-do-card::after {
+    content: "" !important;
+    position: absolute !important;
+    width: 120px !important;
+    height: 120px !important;
+    right: -45px !important;
+    bottom: -45px !important;
+    border-radius: 50% !important;
+    background: rgba(212, 147, 24, 0.08) !important;
+}
+
+.what-we-do-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 18px 45px rgba(20, 70, 45, 0.14) !important;
+}
+
+
+/* ICON */
+
+.what-icon {
+    width: 58px !important;
+    height: 58px !important;
+    margin-bottom: 22px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 16px !important;
+    background: #eaf6ef !important;
+    font-size: 30px !important;
+}
+
+
+/* TITLE */
+
+.what-we-do-card h3 {
+    margin: 0 0 12px !important;
+    font-size: 25px !important;
+    line-height: 1.25 !important;
+    font-weight: 800 !important;
+    color: #075b3c !important;
+}
+
+
+/* DESCRIPTION */
+
+.what-we-do-card p {
+    margin: 0 !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    color: #526b63 !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .what-we-do-section {
+        padding: 75px 20px !important;
+    }
+
+    .what-we-do-header {
+        margin-bottom: 40px !important;
+    }
+
+    .what-we-do-header h2 {
+        font-size: 34px !important;
+    }
+
+    .what-we-do-header p {
+        font-size: 16px !important;
+    }
+
+    .what-we-do-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .what-we-do-card {
+        padding: 30px 25px !important;
+    }
+
+    .what-we-do-card h3 {
+        font-size: 22px !important;
+    }
+}
+ 
+
+
+/* ===============================
+   CARDS GRID
+================================ */
+
+.what-we-do-grid {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 28px !important;
+}
+
+.what-we-do-card {
+    display: block !important;
+    box-sizing: border-box !important;
+
+    min-height: 280px !important;
+    padding: 38px !important;
+
+    background: #ffffff !important;
+    border: 1px solid #e2d9c9 !important;
+    border-radius: 20px !important;
+
+    box-shadow: 0 10px 30px rgba(0, 70, 40, 0.07) !important;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease !important;
+}
+
+.what-we-do-card:hover {
+    transform: translateY(-7px) !important;
+    box-shadow: 0 20px 40px rgba(0, 70, 40, 0.13) !important;
+}
+
+
+/* ===============================
+   ICON
+================================ */
+
+.what-icon {
+    width: 60px !important;
+    height: 60px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin-bottom: 24px !important;
+
+    background: #e7f3e9 !important;
+    border-radius: 50% !important;
+
+    font-size: 28px !important;
+    line-height: 1 !important;
+}
+
+
+/* ===============================
+   CARD TEXT
+================================ */
+
+.what-we-do-card h3 {
+    margin: 0 0 14px !important;
+
+    color: #0b5637 !important;
+
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+    font-weight: 700 !important;
+}
+
+.what-we-do-card p {
+    margin: 0 !important;
+
+    color: #61746d !important;
+
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+}
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    .what-we-do-section {
+        padding: 70px 22px !important;
+    }
+
+    .what-we-do-header {
+        margin-bottom: 45px !important;
+    }
+
+    .what-we-do-header h2 {
+        font-size: 36px !important;
+    }
+
+    .what-we-do-header p {
+        font-size: 16px !important;
+    }
+
+    .what-we-do-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .what-we-do-card {
+        min-height: auto !important;
+        padding: 30px !important;
+    }
+
+    .what-we-do-card h3 {
+        font-size: 22px !important;
+    }
+
+    .what-we-do-card p {
+        font-size: 15px !important;
+    }
+}
+/* =========================================
+   ABOUT COMMUNITY HERO IMAGE
+   ========================================= */
+
+.about-community-hero {
+    width: 100%;
+    padding: 70px 7% 90px;
+    background: #f7f3e9;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.about-community-image {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 35px;
+    border: 8px solid #ffffff;
+    box-shadow: 0 20px 50px rgba(20, 70, 45, 0.18);
+    position: relative;
+}
+
+.about-community-image img {
+    display: block;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.about-community-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .about-community-hero {
+        padding: 25px 18px 45px;
+    }
+
+    .about-community-image {
+        border-radius: 20px;
+    }
+}
+
+.approach-more {
+    display: none;
+    margin-top: 18px;
+    padding: 18px 20px;
+    background: #eaf7ef;
+    border-left: 4px solid #d39a22;
+    border-radius: 10px;
+}
+
+.approach-step.active .approach-more {
+    display: block;
+}
+
+.approach-more p {
+    margin: 0;
+    color: #52706a;
+    font-size: 16px;
+    line-height: 1.7;
+}
+.approach-step {
+    cursor: pointer;
+}
+.story-principles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin: 30px 0;
+}
+
+.story-principle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+    background: #f7f3e9;
+    border: 1px solid rgba(11, 107, 58, 0.12);
+    border-radius: 14px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: default;
+}
+
+.story-principle:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(20, 70, 45, 0.10);
+}
+
+.story-principle span {
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.story-principle strong {
+    color: #075b3c;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.story-tagline {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #d49318;
+    font-size: 20px;
+    font-weight: 800;
+    font-style: italic;
+    color: #d49318;
+}
+
+@media (max-width: 768px) {
+
+    .story-principles {
+        grid-template-columns: 1fr;
+    }
+
+    .story-tagline {
+        font-size: 18px;
+    }
+
+}
+
+.learn-more-btn {
+    margin-top: 20px;
+    padding: 10px 0;
+    border: none;
+    background: transparent;
+    color: #0b6b3a;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+
+.learn-more-btn:hover {
+    color: #d49318;
+}
+
+.program-more {
+    display: none;
+    margin-top: 10px;
+    padding: 18px 20px;
+    background: #f7f3e9;
+    border-left: 4px solid #d49318;
+    border-radius: 10px;
+}
+
+.what-we-do-card.active .program-more {
+    display: block;
+}
+
+.program-more p {
+    margin: 0 0 14px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #526b63;
+}
+
+.program-more ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.program-more li {
+    margin-bottom: 8px;
+    color: #075b3c;
+    font-size: 14px;
+    line-height: 1.5;
+}
+/* =========================
+   OUR FOCUS AREAS
+========================= */
+
+.focus-section {
+    width: 100%;
+    padding: 110px 7%;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.focus-header {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.focus-header > span {
+    display: inline-block;
+    margin-bottom: 15px;
+
+    color: #d49318;
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.focus-header h2 {
+    margin: 0 0 18px;
+
+    color: #075b3c;
+
+    font-size: 46px;
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+.focus-header h2 em {
+    color: #d49318;
+    font-style: italic;
+}
+
+.focus-header p {
+    max-width: 780px;
+    margin: 0 auto;
+
+    color: #526b63;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* CARDS */
+
+.focus-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 18px;
+}
+
+.focus-card {
+    min-height: 190px;
+
+    padding: 28px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #f7f3e9;
+
+    border: 1px solid rgba(11,107,58,0.10);
+
+    border-radius: 20px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.focus-card:hover {
+    transform: translateY(-7px);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 15px 35px rgba(20,70,45,0.12);
+}
+
+.focus-icon {
+    width: 60px;
+    height: 60px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf6ef;
+
+    border-radius: 16px;
+
+    font-size: 30px;
+}
+
+.focus-card h3 {
+    margin: 0;
+
+    color: #075b3c;
+
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 800;
+}
+
+
+/* BUTTON */
+
+.focus-action {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.focus-btn {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: #075b3c;
+    color: #ffffff;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.focus-btn:hover {
+    background: #d49318;
+    transform: translateY(-2px);
+}
+
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+
+    .focus-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .focus-section {
+        padding: 75px 20px;
+    }
+
+    .focus-header h2 {
+        font-size: 34px;
+    }
+
+    .focus-header p {
+        font-size: 16px;
+    }
+
+    .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .focus-card {
+        min-height: 165px;
+        padding: 22px 15px;
+    }
+
+    .focus-card h3 {
+        font-size: 15px;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 450px) {
+
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+    </style>
+</head>
+
+<body>
+   
+    
+
+    <header>
+
+        <div class="navbar">
+
+            <a href="index.html" class="brand">
+
+                <img
+                    src="assets/save-logo.jpeg"
+                    alt="SAVE Foundation Logo"
+                >
+
+                <div class="brand-text">
+
+                    <strong>SAVE FOUNDATION</strong>
+
+                    <span>
+                        Sustainable Agriculture & Village Enrichment
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+
+            <nav id="nav">
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="programs.html">Programs</a>
+                <a href="index.html">Our Impact</a>
+                <a href="support.html">Support SAVE</a>
+                <a href="index.html#contact">Contact</a>
+                
+
+            </nav>
+
+        </div>
+
+    </header>
+      <!-- =========================================
+     ABOUT COMMUNITY INTRO
+     ========================================= -->
+
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="page-hero">
+
+        <div class="hero-content">
+
+            <span class="eyebrow">
+                ABOUT SAVE FOUNDATION
+            </span>
+
+            <h1>
+                Growing stronger
+                <span>villages, together.</span>
+            </h1>
+
+            <p>
+                SAVE Foundation — Sustainable Agriculture and Village
+                Enrichment — works with communities to encourage sustainable
+                livelihoods, strengthen local participation and support
+                inclusive village development.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHO WE ARE
+    ========================== -->
+
+    <section>
+
+        <div class="about-grid">
+
+            <div class="about-image">
+
+                <img
+                    src="assets/village.jpg"
+                    alt="Village community and rural landscape"
+                >
+
+            </div>
+
+
+            <div class="about-text">
+
+                <h2>
+                    Who We <span>Are</span>
+                </h2>
+
+                <p>
+                    SAVE Foundation stands for
+                    <strong>Sustainable Agriculture and Village Enrichment.</strong>
+                </p>
+
+                <p>
+                    The foundation is built around the idea that stronger
+                    communities can grow when local people are actively
+                    involved in identifying challenges, developing practical
+                    solutions and creating sustainable opportunities.
+                </p>
+
+                <p>
+                    Our approach brings together agriculture, livelihoods,
+                    community participation, women-led initiatives, livestock
+                    support and village development.
+                </p>
+
+                <div class="highlight-box">
+
+                    Our focus is people-centered development that respects
+                    local knowledge, community participation and long-term
+                    sustainability.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+   <section class="about-story-intro">
+
+    <div class="story-intro-label">
+        OUR STORY
+    </div>
+
+    <div class="story-intro-grid">
+
+        <div class="story-intro-heading">
+            <h1>
+                More than development.
+                <span>It's about people.</span>
+            </h1>
+        </div>
+
+        <div class="story-intro-content">
+
+            <div class="story-content">
+
+    <p class="story-lead">
+        SAVE Foundation was established with a vision to strengthen rural
+        communities through sustainable agriculture, natural resource
+        management and diversified livelihoods. By placing farmers and
+        communities at the centre of development, we work to enhance
+        agricultural resilience, improve household livelihoods, protect
+        natural resources and create sustainable pathways for village
+        development.
+    </p>
+
+    <div class="story-principles">
+
+        <div class="story-principle">
+            <span>🌱</span>
+            <strong>Agriculture & Allied activities</strong>
+        </div>
+
+        <div class="story-principle">
+            <span>👩‍🌾</span>
+            <strong>Empowered Farmers</strong>
+        </div>
+
+        <div class="story-principle">
+            <span>🤝</span>
+            <strong>Vibrant Communities</strong>
+        </div>
+
+        <div class="story-principle">
+            <span>🌍</span>
+            <strong>Sustainable Future</strong>
+        </div>
+
+    </div>
+
+    <div class="story-tagline">
+        Together for a Sustainable Tomorrow.
+    </div>
+
+</div>
+
+        </div>
+
+    </div>
+
+    <div class="story-intro-image">
+        <img
+            src="assets/community.jpg"
+            alt="Community members participating in a SAVE Foundation activity">
+    </div>
+
+</section>
+
+<!-- ==========================================
+     WHAT WE DO
+========================================== -->
+
+<section class="what-we-do-section">
+
+    <div class="what-we-do-header">
+
+        <span>WHAT WE DO</span>
+
+        <h2>
+            Creating opportunities
+            <em>where they matter most.</em>
+        </h2>
+
+        <p>
+            SAVE Foundation works across key areas that contribute to
+            stronger livelihoods, healthier communities and sustainable
+            village development.
+        </p>
+
+    </div>
+
+
+    <div class="what-we-do-grid">
+
+       <article class="what-we-do-card">
+
+    <div class="what-icon">🌱</div>
+
+    <h3>Agriculture</h3>
+
+    <p>
+        Supporting farmers through skill building, new technologies,
+        seed support and financial linkages for cultivation.
+    </p>
+
+    <button
+        type="button"
+        class="learn-more-btn"
+        onclick="toggleProgram(this)">
+        Learn More →
+    </button>
+
+    <div class="program-more">
+        <p>
+            SAVE Foundation supports farmers through skill building,
+            practical training and awareness on improved agricultural
+            practices and new technologies. We promote access to quality
+            seeds and suitable agricultural inputs while helping farmers
+            explore appropriate loan and financial linkages for cultivation
+            needs. Through knowledge sharing and community-based support,
+            farmers are encouraged to strengthen their agricultural
+            livelihoods.
+        </p>
+
+        <ul>
+            <li>🌱 Farmer skill building and training</li>
+            <li>💡 Introduction to new agricultural technologies</li>
+            <li>🌾 Seed and agricultural input support</li>
+            <li>💰 Loan and financial linkage for cultivation</li>
+            <li>👨‍🌾 Improved and sustainable farming practices</li>
+        </ul>
+    </div>
+
+</article>
+
+    <article class="what-we-do-card">
+
+    <div class="what-icon">🐄</div>
+
+    <h3>Livestock</h3>
+
+    <p>
+        Supporting rural families through livestock purchase loan linkages,
+        improved fodder practices and scientific livestock management.
+    </p>
+
+    <button
+        type="button"
+        class="learn-more-btn"
+        onclick="toggleProgram(this)">
+        Learn More →
+    </button>
+
+    <div class="program-more">
+        <p>
+            SAVE Foundation supports rural families interested in cattle,
+            goats and other livestock-based activities by facilitating
+            suitable financial and loan linkages for livestock purchase.
+            We also promote improved fodder practices, including suitable
+            fodder seeds, and encourage scientific livestock management
+            through practical guidance and community-based support.
+        </p>
+
+        <ul>
+            <li>🐄 Loan linkage for livestock purchase</li>
+            <li>🐐 Support for cattle and goat-based livelihoods</li>
+            <li>🌱 Introduction of suitable fodder seeds</li>
+            <li>🥬 Improved fodder management</li>
+            <li>💡 Scientific livestock management</li>
+            <li>🤝 Practical guidance for livestock families</li>
+        </ul>
+    </div>
+
+</article>
+
+
+      <article class="what-we-do-card">
+
+    <div class="what-icon">👩‍🌾</div>
+
+    <h3>SHG Promotion</h3>
+
+    <p>
+        Strengthening Self-Help Groups through financial literacy,
+        community participation and appropriate bank loan linkages.
+    </p>
+
+    <button
+        type="button"
+        class="learn-more-btn"
+        onclick="toggleProgram(this)">
+        Learn More →
+    </button>
+
+    <div class="program-more">
+        <p>
+            SAVE Foundation works with Self-Help Groups (SHGs) to strengthen
+            financial literacy and community participation. Through awareness
+            and guidance, SHG members can learn about savings, responsible
+            borrowing, loan processes and financial planning. We also support
+            appropriate bank loan linkages and connections with formal
+            financial institutions to explore opportunities for household
+            and livelihood needs.
+        </p>
+
+        <ul>
+            <li>💡 Financial literacy and awareness</li>
+            <li>🏦 Bank loan linkage</li>
+            <li>💰 Understanding savings and credit</li>
+            <li>👩‍🌾 SHG member skill building</li>
+            <li>🤝 Strengthening community groups</li>
+            <li>📋 Responsible financial planning</li>
+        </ul>
+    </div>
+
+</article>
+
+<article class="what-we-do-card">
+
+    <div class="what-icon">💼</div>
+
+    <h3>Livelihood Development</h3>
+
+    <p>
+        Supporting rural families through skill building, livelihood
+        finance and market linkage opportunities based on their needs.
+    </p>
+
+    <button
+        type="button"
+        class="learn-more-btn"
+        onclick="toggleProgram(this)">
+        Learn More →
+    </button>
+
+    <div class="program-more">
+
+        <p>
+            SAVE Foundation works with rural families and communities to
+            understand their skills, interests, resources and livelihood
+            needs. Through skill building and practical training, we support
+            families in exploring suitable livelihood activities. Where
+            appropriate, communities can be connected with relevant
+            financial and loan linkages for their livelihood requirements.
+            The foundation also promotes market linkage opportunities,
+            helping communities explore suitable buyers, markets and
+            channels for their products and services.
+        </p>
+
+        <ul>
+            <li>💡 Skill building and practical training</li>
+            <li>👨‍👩‍👧 Understanding family livelihood needs</li>
+            <li>💰 Financial and loan linkage for livelihood activities</li>
+            <li>🛠️ Support for suitable livelihood opportunities</li>
+            <li>🤝 Community-based livelihood development</li>
+            <li>🌾 Market linkage and buyer connections</li>
+        </ul>
+
+    </div>
+
+</article>
+    </div>
+
+</section>
+
+    <!-- =========================
+         OUR APPROACH
+    ========================== -->
+
+   <section class="approach-section" id="approach">
+
+    <div class="approach-header">
+
+        <span>OUR APPROACH</span>
+
+        <h2>
+            From community needs to
+            <em>sustainable action.</em>
+        </h2>
+
+        <p>
+            We believe meaningful development begins by understanding
+            communities, working alongside them and creating practical
+            opportunities for sustainable and self-reliant village development.
+        </p>
+
+    </div>
+<div class="approach-list">
+
+    <!-- 01 -->
+
+    <div class="approach-item">
+
+        <div class="approach-number">
+            01
+        </div>
+
+        <div class="approach-content">
+
+            <h3>
+                Community-Led Development
+            </h3>
+
+            <p>
+                We believe sustainable development begins when communities
+                actively participate in identifying challenges and developing
+                solutions.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- 02 -->
+
+    <div class="approach-item">
+
+        <div class="approach-number">
+            02
+        </div>
+
+        <div class="approach-content">
+
+            <h3>
+                Farmer-Centric Solutions
+            </h3>
+
+            <p>
+                We place farmers and rural households at the centre of our
+                programmes and promote solutions that are practical,
+                affordable, and locally appropriate.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- 03 -->
+
+    <div class="approach-item">
+
+        <div class="approach-number">
+            03
+        </div>
+
+        <div class="approach-content">
+
+            <h3>
+                Knowledge & Innovation
+            </h3>
+
+            <p>
+                We combine traditional knowledge with scientific approaches,
+                appropriate technology, demonstrations, and field-based
+                learning.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- 04 -->
+
+    <div class="approach-item">
+
+        <div class="approach-number">
+            04
+        </div>
+
+        <div class="approach-content">
+
+            <h3>
+                Partnership & Collaboration
+            </h3>
+
+            <p>
+                We work with communities, government institutions, civil
+                society organizations, technical institutions, donors, and
+                other stakeholders to create greater impact.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+    
+
+</section>
+
+
+   <!-- OUR FOCUS AREAS -->
+
+<section class="focus-section" id="programs">
+
+    <div class="focus-header">
+
+        <span>OUR FOCUS AREAS</span>
+
+        <h2>
+            Areas where communities can
+            <em>grow.</em>
+        </h2>
+
+        <p>
+            SAVE Foundation works across interconnected areas that
+            strengthen livelihoods, empower communities and support
+            sustainable village development.
+        </p>
+
+    </div>
+
+
+    <div class="focus-grid">
+
+
+        <a href="programmes.html" class="focus-card">
+
+            <div class="focus-icon">🌱</div>
+
+            <h3>
+                Agriculture & Allied Livelihoods
+            </h3>
+
+        </a>
+
+
+        <a href="programmes.html" class="focus-card">
+
+            <div class="focus-icon">💧</div>
+
+            <h3>
+                Natural Resource Management
+            </h3>
+
+        </a>
+
+
+        <a href="programmes.html" class="focus-card">
+
+            <div class="focus-icon">👩‍🌾</div>
+
+            <h3>
+                Women Empowerment
+            </h3>
+
+        </a>
+
+
+        <a href="programmes.html" class="focus-card">
+
+            <div class="focus-icon">👨‍🎓</div>
+
+            <h3>
+                Youth Development
+            </h3>
+
+        </a>
+
+
+        <a href="programmes.html" class="focus-card">
+
+            <div class="focus-icon">🛠️</div>
+
+            <h3>
+                Skill & Entrepreneurship Development
+            </h3>
+
+        </a>
+
+
+        <a href="programmes.html" class="focus-card">
+
+            <div class="focus-icon">📚</div>
+
+            <h3>
+                Education
+            </h3>
+
+        </a>
+
+
+        <a href="programmes.html" class="focus-card">
+
+            <div class="focus-icon">❤️</div>
+
+            <h3>
+                Health & Nutrition
+            </h3>
+
+        </a>
+
+
+        <a href="programmes.html" class="focus-card">
+
+            <div class="focus-icon">🌳</div>
+
+            <h3>
+                Environmental Conservation
+            </h3>
+
+        </a>
+
+
+        <a href="programmes.html" class="focus-card">
+
+            <div class="focus-icon">🏘️</div>
+
+            <h3>
+                Village Infrastructure
+            </h3>
+
+        </a>
+
+
+        <a href="programmes.html" class="focus-card">
+
+            <div class="focus-icon">🤝</div>
+
+            <h3>
+                Community Institutions
+            </h3>
+
+        </a>
+
+
+    </div>
+
+
+    <div class="focus-action">
+
+        <a href="programs.html" class="focus-btn">
+            Explore All Programmes →
+        </a>
+
+    </div>
+
+</section>
+
+
+    <!-- =========================
+         VISION
+    ========================== -->
+
+    <section class="vision-section">
+
+        <div class="vision-grid">
+
+            <div class="vision-card">
+
+                <h2>
+                    Our Vision
+                </h2>
+
+                <p>
+                    To contribute to stronger, more sustainable and inclusive
+                    village communities where people can participate in
+                    creating opportunities for better livelihoods and a
+                    healthier future.
+                </p>
+
+            </div>
+
+
+            <div class="vision-card">
+
+                <h2>
+                    Our Commitment
+                </h2>
+
+                <p>
+                    We aim to encourage practical, community-centered
+                    approaches that connect people, livelihoods, agriculture
+                    and the environment.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="cta">
+
+        <h2>
+            Be part of a stronger community
+        </h2>
+
+        <p>
+            Explore the work of SAVE Foundation or get in touch with us to
+            learn more about our community-focused initiatives.
+        </p>
+
+        <a
+            href="index.html#programs"
+            class="btn btn-white"
+        >
+            Explore Our Work
+        </a>
+
+        <a
+            href="index.html#contact"
+            class="btn btn-green"
+        >
+            Contact SAVE
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <div class="footer-top">
+
+                <a href="index.html" class="footer-brand">
+
+                    <img
+                        src="assets/save-logo.jpeg"
+                        alt="SAVE Foundation Logo"
+                    >
+
+                    <strong>
+                        SAVE FOUNDATION
+                    </strong>
+
+                </a>
+
+
+                <div class="footer-links">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="index.html#programs">
+                        Programs
+                    </a>
+
+                    <a href="index.html#contact">
+                        Contact
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/savefoundation_2026/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Instagram
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/save-foundation-b0907742b/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-line"></div>
+
+
+            <div class="copyright">
+
+                © 2026 SAVE Foundation — Sustainable Agriculture and
+                Village Enrichment. All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        const menuBtn = document.getElementById("menuBtn");
+        const nav = document.getElementById("nav");
+
+        menuBtn.addEventListener("click", function () {
+
+            nav.classList.toggle("open");
+
+        });
+
+
+        document.querySelectorAll("#nav a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                nav.classList.remove("open");
+
+            });
+
+        });
+
+
+
+    function toggleApproach(step) {
+
+        document.querySelectorAll(".approach-step").forEach(function(item) {
+
+            if (item !== step) {
+                item.classList.remove("active");
+            }
+
+        });
+
+        step.classList.toggle("active");
+    }
+    
+    function toggleProgram(button) {
+
+    const card = button.closest(".what-we-do-card");
+
+    card.classList.toggle("active");
+
+    if (card.classList.contains("active")) {
+        button.textContent = "Show Less ↑";
+    } else {
+        button.textContent = "Learn More →";
+    }
+}
+</script>
+       
+
+    
+
+</body>
+</html>

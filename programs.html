@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SAVE Foundation | Sustainable Agriculture and Village Enrichment</title>
+  <link rel="icon" type="image/png" href="assets/save-favicon.png">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f3e9;
+            color: #23483a;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            width: 100%;
+            background: #ffffff;
+            padding: 18px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-area img {
+            width: 58px;
+            height: 58px;
+            object-fit: contain;
+        }
+
+        .logo-text h2 {
+            color: #075b3c;
+            font-size: 22px;
+            margin: 0;
+        }
+
+        .logo-text span {
+            color: #d49318;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #23483a;
+            font-size: 15px;
+            font-weight: 700;
+            transition: color 0.25s ease;
+        }
+
+        nav a:hover {
+            color: #0b6b3a;
+        }
+
+        nav a.active {
+            color: #0b6b3a;
+        }
+
+        .support-btn {
+            padding: 11px 20px;
+            background: #0b6b3a;
+            color: #ffffff !important;
+            border-radius: 25px;
+        }
+
+        .support-btn:hover {
+            background: #075b3c;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .programmes-hero {
+            min-height: 520px;
+            padding: 100px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:
+                linear-gradient(
+                    rgba(5, 77, 53, 0.82),
+                    rgba(5, 77, 53, 0.82)
+                ),
+                url("assets/village-background.jpg") center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            color: #ffffff;
+        }
+
+        .hero-label {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 8px 18px;
+            border: 1px solid rgba(255,255,255,0.35);
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .hero-content h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 22px;
+        }
+
+        .hero-content h1 em {
+            color: #e3a72b;
+            font-style: normal;
+        }
+
+        .hero-content p {
+            max-width: 760px;
+            margin: 0 auto;
+            font-size: 19px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.92);
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .programmes-intro {
+            padding: 100px 7%;
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .section-label {
+            display: inline-block;
+            margin-bottom: 14px;
+            color: #0b6b3a;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .programmes-intro h2 {
+            max-width: 850px;
+            margin: 0 auto 20px;
+            font-size: 44px;
+            line-height: 1.2;
+            color: #064d35;
+        }
+
+        .programmes-intro h2 em {
+            color: #d49318;
+            font-style: italic;
+        }
+
+        .programmes-intro p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #526b63;
+        }
+
+        /* =========================
+           PROGRAMMES GRID
+        ========================= */
+
+        .programmes-section {
+            padding: 100px 7%;
+            background: #f7f3e9;
+        }
+
+        .programmes-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .programme-card {
+            background: #ffffff;
+            padding: 38px;
+            border-radius: 24px;
+            border: 1px solid rgba(11,107,58,0.08);
+            box-shadow: 0 12px 35px rgba(20,70,45,0.08);
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .programme-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(20,70,45,0.14);
+        }
+
+        .programme-number {
+            color: #d49318;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+        }
+
+        .programme-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            background: #eaf6ef;
+            border-radius: 17px;
+            font-size: 30px;
+        }
+
+        .programme-card h3 {
+            margin-bottom: 12px;
+            color: #075b3c;
+            font-size: 25px;
+        }
+
+        .programme-card p {
+            color: #526b63;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           SUPPORT CTA
+        ========================= */
+
+        .programmes-cta {
+            padding: 100px 7%;
+            background: #064d35;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .programmes-cta h2 {
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .programmes-cta p {
+            max-width: 750px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.88);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #d49318;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 800;
+        }
+
+        .cta-btn:hover {
+            background: #e3a72b;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 55px 7%;
+            background: #062f22;
+            color: #ffffff;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 35px;
+        }
+
+        footer h3 {
+            margin-bottom: 18px;
+            color: #ffffff;
+        }
+
+        footer p,
+        footer a {
+            color: rgba(255,255,255,0.72);
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        footer a {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        footer a:hover {
+            color: #e3a72b;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.12);
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 13px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                padding: 15px 5%;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .hero-content h1 {
+                font-size: 45px;
+            }
+
+            .programmes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px 18px;
+            }
+
+            .programmes-hero {
+                min-height: 450px;
+                padding: 80px 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .programmes-intro {
+                padding: 70px 20px;
+            }
+
+            .programmes-intro h2 {
+                font-size: 32px;
+            }
+
+            .programmes-section {
+                padding: 70px 20px;
+            }
+
+            .programme-card {
+                padding: 28px 24px;
+            }
+
+            .programmes-cta {
+                padding: 70px 20px;
+            }
+
+            .programmes-cta h2 {
+                font-size: 32px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+        .programme-learn-btn {
+    margin-top: 20px;
+    padding: 10px 0;
+    border: none;
+    background: transparent;
+    color: #0b6b3a;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.programme-learn-btn:hover {
+    color: #d49318;
+}
+
+.programme-more {
+    display: none;
+    margin-top: 12px;
+    padding: 18px 20px;
+    background: #f7f3e9;
+    border-left: 4px solid #d49318;
+    border-radius: 10px;
+}
+
+.programme-card.active .programme-more {
+    display: block;
+}
+
+.programme-more p {
+    margin: 0 0 14px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #526b63;
+}
+
+.programme-more ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.programme-more li {
+    margin-bottom: 8px;
+    color: #075b3c;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo-area">
+
+            <img
+                src="assets/save-logo.jpeg"
+                alt="SAVE Foundation Logo">
+
+            <div class="logo-text">
+                <h2>SAVE Foundation</h2>
+                <span>SUSTAINABLE AGRICULTURE & VILLAGE ENRICHMENT</span>
+            </div>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About Us</a>
+
+            <a href="programmes.html" class="active">
+                Programmes
+            </a>
+            <a href="index.html">Our Impact</a>
+            <a href="support.html" class="support-btn">
+                Support SAVE
+            </a>
+
+            <a href="index.html#contact">
+                Contact Us
+            </a>
+
+            
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="programmes-hero">
+
+        <div class="hero-content">
+
+            <span class="hero-label">
+                OUR PROGRAMMES
+            </span>
+
+            <h1>
+                Building stronger communities,
+                <em>together.</em>
+            </h1>
+
+            <p>
+                SAVE Foundation works with rural communities through
+                integrated programmes that strengthen livelihoods,
+                empower people, protect natural resources and promote
+                sustainable village development.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+    <section class="programmes-intro">
+
+        <span class="section-label">
+            WHAT WE FOCUS ON
+        </span>
+
+        <h2>
+            Creating opportunities
+            <em>where they matter most.</em>
+        </h2>
+
+        <p>
+            Our programmes are designed around the needs, strengths and
+            aspirations of rural communities. Through community participation,
+            skill development, livelihood support and institutional strengthening,
+            SAVE Foundation works towards resilient and self-reliant villages.
+        </p>
+
+    </section>
+
+
+    <!-- PROGRAMMES -->
+    <section class="programmes-section">
+
+        <div class="programmes-grid">
+
+            <!-- PROGRAMME 01 -->
+
+            <article class="programme-card">
+
+    <div class="programme-number">
+        01
+    </div>
+
+    <div class="programme-icon">
+        🌱
+    </div>
+
+    <h3>
+        Agriculture & Allied Livelihoods
+    </h3>
+
+    <p>
+        Supporting farmers and rural families through sustainable
+        agriculture, improved practices, skill development, livestock
+        opportunities and appropriate financial linkages.
+    </p>
+
+    <button
+        type="button"
+        class="programme-learn-btn"
+        onclick="toggleProgramme(this)">
+        Learn More →
+    </button>
+
+    <div class="programme-more">
+
+        <p>
+            SAVE Foundation supports rural communities through practical
+            agricultural knowledge, skill building and awareness of improved
+            farming practices and new technologies.
+        </p>
+
+        <ul>
+            <li>🌱 Farmer skill building and training</li>
+            <li>💡 New agricultural technologies</li>
+            <li>🌾 Seed and agricultural input support</li>
+            <li>💰 Appropriate loan and financial linkages</li>
+            <li>🐄 Livestock-based livelihood opportunities</li>
+            <li>🤝 Market linkage opportunities</li>
+        </ul>
+
+    </div>
+
+</article>
+
+           <!-- PROGRAMME 02 -->
+
+<article class="programme-card">
+
+    <div class="programme-number">
+        02
+    </div>
+
+    <div class="programme-icon">
+        💧
+    </div>
+
+    <h3>
+        Natural Resource Management
+    </h3>
+
+    <p>
+        Promoting responsible use, conservation and community participation
+        in the management of soil, water and other local natural resources.
+    </p>
+
+    <button
+        type="button"
+        class="programme-learn-btn"
+        onclick="toggleProgramme(this)">
+        Learn More →
+    </button>
+
+    <div class="programme-more">
+
+        <p>
+            SAVE Foundation promotes community awareness and participation
+            in the responsible management of natural resources. The focus
+            is on understanding local resources, encouraging sustainable
+            practices and supporting communities in protecting the resources
+            that are important for their livelihoods and future.
+        </p>
+
+        <ul>
+            <li>💧 Water resource awareness and conservation</li>
+            <li>🌱 Soil conservation and sustainable land practices</li>
+            <li>🌿 Natural resource protection</li>
+            <li>👥 Community participation in resource management</li>
+            <li>💡 Awareness on sustainable resource use</li>
+            <li>🌍 Community-focused environmental practices</li>
+        </ul>
+
+    </div>
+
+</article>
+
+
+          <!-- PROGRAMME 03 -->
+
+<article class="programme-card">
+
+    <div class="programme-number">
+        03
+    </div>
+
+    <div class="programme-icon">
+        👩‍🌾
+    </div>
+
+    <h3>
+        Women Empowerment
+    </h3>
+
+    <p>
+        Strengthening women's participation, financial awareness,
+        skills, leadership and livelihood opportunities through
+        Self-Help Groups and community-based initiatives.
+    </p>
+
+    <button
+        type="button"
+        class="programme-learn-btn"
+        onclick="toggleProgramme(this)">
+        Learn More →
+    </button>
+
+    <div class="programme-more">
+
+        <p>
+            SAVE Foundation works with women and Self-Help Groups to
+            strengthen financial awareness, participation and access
+            to suitable opportunities. Through community-based support,
+            women can build knowledge, skills and confidence while
+            exploring livelihood and financial opportunities.
+        </p>
+
+        <ul>
+            <li>👩‍🌾 Self-Help Group promotion</li>
+            <li>💡 Financial literacy and awareness</li>
+            <li>💰 Savings and responsible borrowing awareness</li>
+            <li>🏦 Appropriate bank loan linkages</li>
+            <li>🛠️ Skill and livelihood development</li>
+            <li>🤝 Women's participation in community institutions</li>
+        </ul>
+
+    </div>
+
+</article>
+
+            <!-- PROGRAMME 04 -->
+
+<article class="programme-card">
+
+    <div class="programme-number">
+        04
+    </div>
+
+    <div class="programme-icon">
+        👨‍🎓
+    </div>
+
+    <h3>
+        Youth Development
+    </h3>
+
+    <p>
+        Creating opportunities for rural youth through skill development,
+        awareness, participation and livelihood-oriented activities that
+        support their future aspirations.
+    </p>
+
+    <button
+        type="button"
+        class="programme-learn-btn"
+        onclick="toggleProgramme(this)">
+        Learn More →
+    </button>
+
+    <div class="programme-more">
+
+        <p>
+            SAVE Foundation encourages young people to participate in
+            community development and explore opportunities that can
+            strengthen their skills and future livelihoods. Through
+            practical learning, awareness and community participation,
+            youth can develop knowledge and confidence for their future.
+        </p>
+
+        <ul>
+            <li>🎓 Skill development and practical learning</li>
+            <li>💡 Career and livelihood awareness</li>
+            <li>🛠️ Vocational and practical skills</li>
+            <li>🚀 Entrepreneurship awareness</li>
+            <li>🤝 Youth participation in community activities</li>
+            <li>🌱 Opportunities for local livelihood development</li>
+        </ul>
+
+    </div>
+
+</article>
+
+<!-- PROGRAMME 05 -->
+
+<article class="programme-card">
+
+    <div class="programme-number">
+        05
+    </div>
+
+    <div class="programme-icon">
+        💡
+    </div>
+
+    <h3>
+        Skill & Entrepreneurship Development
+    </h3>
+
+    <p>
+        Promoting practical skills, entrepreneurship awareness and
+        suitable livelihood opportunities that can help individuals
+        and families strengthen their economic participation.
+    </p>
+
+    <button
+        type="button"
+        class="programme-learn-btn"
+        onclick="toggleProgramme(this)">
+        Learn More →
+    </button>
+
+    <div class="programme-more">
+
+        <p>
+            SAVE Foundation supports individuals and communities in
+            identifying suitable skills and exploring livelihood and
+            entrepreneurship opportunities. Through practical training,
+            knowledge sharing and guidance, people can strengthen their
+            capabilities and explore opportunities based on their
+            interests, resources and local needs.
+        </p>
+
+        <ul>
+            <li>💡 Skill building and practical training</li>
+            <li>🛠️ Development of livelihood-related skills</li>
+            <li>🚀 Entrepreneurship awareness</li>
+            <li>📋 Guidance for suitable livelihood activities</li>
+            <li>💰 Financial and livelihood opportunity awareness</li>
+            <li>🤝 Community-based skill development</li>
+        </ul>
+
+    </div>
+
+</article>
+
+
+           <!-- PROGRAMME 06 -->
+
+<article class="programme-card">
+
+    <div class="programme-number">
+        06
+    </div>
+
+    <div class="programme-icon">
+        📚
+    </div>
+
+    <h3>
+        Education
+    </h3>
+
+    <p>
+        Supporting educational awareness and opportunities that
+        contribute to stronger families, improved knowledge and
+        long-term community development.
+    </p>
+
+    <button
+        type="button"
+        class="programme-learn-btn"
+        onclick="toggleProgramme(this)">
+        Learn More →
+    </button>
+
+    <div class="programme-more">
+
+        <p>
+            SAVE Foundation promotes education as an important part of
+            sustainable community development. The programme focuses on
+            creating awareness, encouraging learning opportunities and
+            supporting communities in recognizing the importance of
+            education for children, youth and families.
+        </p>
+
+        <ul>
+            <li>📚 Educational awareness</li>
+            <li>🎓 Encouraging learning opportunities</li>
+            <li>👧 Support for children's education awareness</li>
+            <li>👨‍🎓 Youth education and development</li>
+            <li>💡 Community awareness on the importance of education</li>
+            <li>🤝 Community participation in educational initiatives</li>
+        </ul>
+
+    </div>
+
+</article>
+
+<!-- PROGRAMME 07 -->
+
+<article class="programme-card">
+
+    <div class="programme-number">
+        07
+    </div>
+
+    <div class="programme-icon">
+        ❤️
+    </div>
+
+    <h3>
+        Health & Nutrition
+    </h3>
+
+    <p>
+        Promoting awareness around health, nutrition and healthy
+        community practices that contribute to the well-being
+        of rural families.
+    </p>
+
+    <button
+        type="button"
+        class="programme-learn-btn"
+        onclick="toggleProgramme(this)">
+        Learn More →
+    </button>
+
+    <div class="programme-more">
+
+        <p>
+            SAVE Foundation promotes awareness of healthy practices
+            and the importance of nutrition within rural communities.
+            The programme encourages families and community groups to
+            understand everyday health and nutrition practices that
+            can contribute to healthier and more resilient communities.
+        </p>
+
+        <ul>
+            <li>❤️ Health awareness</li>
+            <li>🥗 Nutrition awareness</li>
+            <li>👨‍👩‍👧 Healthy family practices</li>
+            <li>💡 Community health education</li>
+            <li>🌱 Awareness of balanced and nutritious food</li>
+            <li>🤝 Community participation in health initiatives</li>
+        </ul>
+
+    </div>
+
+</article>
+
+
+       <!-- PROGRAMME 08 -->
+
+<article class="programme-card">
+
+    <div class="programme-number">
+        08
+    </div>
+
+    <div class="programme-icon">
+        🌿
+    </div>
+
+    <h3>
+        Environmental Conservation
+    </h3>
+
+    <p>
+        Encouraging environmentally responsible practices and
+        community participation in the conservation and protection
+        of local natural resources.
+    </p>
+
+    <button
+        type="button"
+        class="programme-learn-btn"
+        onclick="toggleProgramme(this)">
+        Learn More →
+    </button>
+
+    <div class="programme-more">
+
+        <p>
+            SAVE Foundation encourages communities to understand the
+            importance of protecting their local environment and natural
+            resources. Through awareness and community participation,
+            the programme promotes responsible practices that can
+            contribute to healthier and more sustainable villages.
+        </p>
+
+        <ul>
+            <li>🌿 Environmental awareness</li>
+            <li>🌳 Community participation in conservation</li>
+            <li>💧 Protection of local natural resources</li>
+            <li>🌱 Sustainable environmental practices</li>
+            <li>♻️ Awareness of responsible resource use</li>
+            <li>🤝 Community-led environmental initiatives</li>
+        </ul>
+
+    </div>
+
+</article>
+
+
+            <!-- PROGRAMME 09 -->
+
+<article class="programme-card">
+
+    <div class="programme-number">
+        09
+    </div>
+
+    <div class="programme-icon">
+        🏡
+    </div>
+
+    <h3>
+        Village Infrastructure
+    </h3>
+
+    <p>
+        Supporting community-oriented development and improvement
+        of village infrastructure based on local needs and priorities.
+    </p>
+
+    <button
+        type="button"
+        class="programme-learn-btn"
+        onclick="toggleProgramme(this)">
+        Learn More →
+    </button>
+
+    <div class="programme-more">
+
+        <p>
+            SAVE Foundation recognizes the importance of suitable village
+            infrastructure in supporting community well-being and local
+            development. The programme focuses on understanding community
+            priorities and supporting appropriate infrastructure-related
+            initiatives in collaboration with local communities.
+        </p>
+
+        <ul>
+            <li>🏡 Identification of local infrastructure needs</li>
+            <li>🤝 Community participation in development</li>
+            <li>💧 Support for appropriate community facilities</li>
+            <li>🛣️ Village development awareness</li>
+            <li>👥 Community-based planning</li>
+            <li>🌱 Infrastructure for sustainable village development</li>
+        </ul>
+
+    </div>
+
+</article>
+
+
+           <!-- PROGRAMME 10 -->
+
+<article class="programme-card">
+
+    <div class="programme-number">
+        10
+    </div>
+
+    <div class="programme-icon">
+        🤝
+    </div>
+
+    <h3>
+        Community Institutions
+    </h3>
+
+    <p>
+        Strengthening Self-Help Groups, farmer groups and other
+        community institutions to encourage participation, collective
+        action and local development.
+    </p>
+
+    <button
+        type="button"
+        class="programme-learn-btn"
+        onclick="toggleProgramme(this)">
+        Learn More →
+    </button>
+
+    <div class="programme-more">
+
+        <p>
+            SAVE Foundation works with community groups and local
+            institutions to encourage participation, cooperation and
+            collective action. Strong community institutions can help
+            people come together, understand shared needs and work
+            towards locally relevant development opportunities.
+        </p>
+
+        <ul>
+            <li>🤝 Strengthening Self-Help Groups</li>
+            <li>👩‍🌾 Farmer and community groups</li>
+            <li>👥 Community participation</li>
+            <li>💡 Awareness and capacity building</li>
+            <li>📋 Collective planning and decision-making</li>
+            <li>🌱 Community-led development initiatives</li>
+        </ul>
+
+    </div>
+
+</article>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+<section class="programmes-cta">
+
+    <span class="section-label" style="color:#e3a72b;">
+        GET INVOLVED
+    </span>
+
+    <h2>
+        Together, we can strengthen
+        <em style="color:#e3a72b;">rural communities.</em>
+    </h2>
+
+    <p>
+        SAVE Foundation works alongside rural communities to strengthen
+        livelihoods, build skills, support community institutions and
+        create opportunities for sustainable village development.
+        Your support, partnership or participation can help us take
+        these efforts forward.
+    </p>
+
+    <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
+
+        <a href="support.html" class="cta-btn">
+            Support SAVE
+        </a>
+
+        <a
+            href="index.html#contact"
+            class="cta-btn"
+            style="background:transparent; border:1px solid #ffffff;">
+            Get Involved
+        </a>
+
+    </div>
+
+</section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+                <h3>SAVE Foundation</h3>
+
+                <p>
+                    Sustainable Agriculture & Village Enrichment
+                </p>
+
+                <p style="margin-top:12px;">
+                    Working towards sustainable livelihoods,
+                    empowered communities and stronger villages.
+                </p>
+            </div>
+
+
+            <div>
+                <h3>Programmes</h3>
+
+                <a href="#agriculture">
+                    Agriculture & Allied Livelihoods
+                </a>
+
+                <a href="#natural-resources">
+                    Natural Resource Management
+                </a>
+
+                <a href="#women">
+                    Women Empowerment
+                </a>
+
+                <a href="#livelihood">
+                    Skill & Livelihood Development
+                </a>
+            </div>
+
+
+            <div>
+                <h3>Quick Links</h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="programmes.html">
+                    Programmes
+                </a>
+
+                <a href="index.html#contact">
+                    Contact Us
+                </a>
+
+                <a href="donate.html">
+                    Support SAVE
+                </a>
+            </div>
+
+
+            <div>
+                <h3>Follow SAVE</h3>
+
+                <a
+                    href="https://www.instagram.com/savefoundation_2026/"
+                    target="_blank"
+                    rel="noopener">
+                    Instagram
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/save-foundation-b0907742b/"
+                    target="_blank"
+                    rel="noopener">
+                    LinkedIn
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 SAVE Foundation.
+            Sustainable Agriculture & Village Enrichment.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+<script>
+function toggleProgramme(button) {
+
+    const card = button.closest(".programme-card");
+
+    card.classList.toggle("active");
+
+    if (card.classList.contains("active")) {
+        button.textContent = "Show Less ↑";
+    } else {
+        button.textContent = "Learn More →";
+    }
+
+}
+</script>
+
+</body>
+</html>
